@@ -1,0 +1,16 @@
+- name: trigger
+  hosts: buildservers
+  vars:
+    Uname: "admin"
+    Pass: "password"
+    HostName: "localhost:8080"
+    TokenName: "11c442bbbbeada6f134877e5076fb5b76f"
+  tasks:
+  - name: Queue build
+    uri:
+      url: "http://{{ HostName }}/job/{{ JobName }}/build?token={{ TokenName }}"
+      method: POST
+      user: "{{ Uname }}"
+      password: "{{ TokenName }}"
+      force_basic_auth: yes
+      status_code: 201

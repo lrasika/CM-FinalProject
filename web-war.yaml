@@ -1,0 +1,11 @@
+---
+- hosts: buildservers
+  become: true
+  vars:
+  - warName: sample.war
+  - tomcat_version: 8.5.61
+  - warRemotePath: /opt/apache-tomcat-{{tomcat_version}}/webapps
+
+  tasks:
+  - name: Copy War to Remote server
+    copy: scr=target/{{warName}} dest={{warRemotePath}}/{{warName}} owner=tomcat group=tomcat
