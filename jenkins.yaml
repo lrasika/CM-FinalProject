@@ -2,7 +2,7 @@
   hosts: buildservers
   vars:
     Uname: "admin"
-    Pass: "password"
+    Pass: "admin"
     HostName: "localhost:8080"
     TokenName: "117bfd459ede8eab53da4a284bfba3c4fc"
   tasks:
