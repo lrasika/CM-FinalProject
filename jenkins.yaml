@@ -4,7 +4,7 @@
     Uname: "admin"
     Pass: "password"
     HostName: "localhost:8080"
-    TokenName: "11c442bbbbeada6f134877e5076fb5b76f"
+    TokenName: "117bfd459ede8eab53da4a284bfba3c4fc"
   tasks:
   - name: Queue build
     uri:
